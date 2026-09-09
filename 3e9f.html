@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>« The Mystery of Consciousness » (Searle, 1997) — synthèse du livre et de ses commentaires — CD Consulting R&amp;D</title>
+  <meta name="description" content="Two-page synthesis, in French, of John R. Searle&#x27;s The Mystery of Consciousness (1997): the book and its biological naturalism, the six positions reviewed (Crick, Edelman, Penrose, Dennett, Chalmers, Rosenfield) in one line each, the commentators (Araujo 2013, the 2025 adversarial test of IIT and GNWT, the Chinese room and large language models), and what to keep.">
+  <style>
+/* Mixed edition: light by default, dark when the system asks for it, and a manual switch
+   (remembered in this browser) that overrides the system in both directions. The two
+   palettes are those already used in this Knowledge Base: the light one of the chapter
+   indexes, the nocturnal one of entry 1. */
+:root{
+  color-scheme:light dark;
+  --bg:#f7f6f3; --panel:#ffffff; --panel-2:#efede8; --quote:#f1efea; --code:#efede8;
+  --ink:#1a1a1a; --ink-strong:#0e0e0e; --muted:#555c66; --rule:#ddd8cf; --rule-soft:#e8e4dc;
+  --accent:#3d6478; --accent-hover:#274a5c; --sel:#d9e4ec; --hover:#f3f1ec; --scroll:#c9c4ba;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+    --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+    --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+  --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+  --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px 104px}
+::selection{background:var(--sel);color:var(--ink-strong)}
+h1{font-family:var(--serif);font-size:clamp(27px,4.4vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.015em;
+  margin:0 0 18px;color:var(--ink-strong);padding-bottom:22px;border-bottom:2px solid var(--accent);text-align:center}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink-strong);
+  margin:60px 0 14px;padding-top:26px;border-top:1px solid var(--rule);scroll-margin-top:16px}
+h2#contents{border-top:none;padding-top:0;margin-top:42px}
+h3{font-size:18px;font-weight:600;margin:38px 0 10px;letter-spacing:-.005em;font-family:var(--serif);color:var(--ink-strong);scroll-margin-top:16px}
+p{margin:0 0 17px;max-width:72ch}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent-hover);text-decoration-thickness:2px}
+a.ref{font-family:var(--sans);font-size:.82em;text-decoration:none;white-space:nowrap}
+strong{font-weight:650;color:var(--ink-strong)}
+ul,ol{max-width:72ch;padding-left:24px;margin:0 0 19px}
+li{margin-bottom:10px}
+li::marker{color:var(--muted)}
+h2#contents + ol{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 22px 46px;max-width:none;font-size:15px}
+h2#contents + ol li{margin-bottom:8px}
+h2#contents + ol li::marker{color:var(--accent)}
+code{font-family:var(--mono);font-size:.87em;background:var(--code);color:var(--ink);padding:2px 6px;border-radius:4px;word-break:break-word;border:1px solid var(--rule-soft)}
+.scroll{overflow-x:auto;margin:26px 0 30px;border:1px solid var(--rule);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.55}
+thead th{background:var(--panel-2);color:var(--ink-strong);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:650;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--hover)}
+ol.srclist{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 24px 22px 24px;max-width:none;list-style:none}
+ol.srclist li{margin-bottom:15px;line-height:1.55;font-size:14px;padding-left:52px;position:relative}
+ol.srclist li:last-child{margin-bottom:0}
+ol.srclist li .tag{position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+ol.srclist a{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+*{scrollbar-color:var(--scroll) var(--bg)}
+.mark{font-family:var(--sans);font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;text-align:center}
+nav.crumbs{font-family:var(--sans);font-size:12.5px;text-align:center;color:var(--muted);margin-bottom:26px}
+nav.crumbs a{color:var(--accent)}
+.cartouche{font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:34px;padding-bottom:24px;border-bottom:1px solid var(--rule-soft)}
+.standfirst{font-family:var(--serif);font-size:16px;color:var(--muted);text-align:center;margin:0 0 8px;max-width:none}
+.meta-line{font-family:var(--sans);font-size:13px;color:var(--muted);text-align:center;margin-bottom:38px;max-width:none}
+.theme{position:fixed;top:14px;right:14px;font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--panel);color:var(--muted);border:1px solid var(--rule);border-radius:99px;padding:6px 12px;cursor:pointer}
+.theme:hover{color:var(--accent);border-color:var(--accent)}
+footer{margin-top:56px;padding-top:26px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6}
+footer p{margin-bottom:14px;max-width:none}
+footer .backlinks{text-align:center;margin-top:34px;font-size:14px}
+@media (max-width:640px){.wrap{padding:34px 16px 68px}body{font-size:16px}h2#contents + ol{padding-left:38px}.theme{top:8px;right:8px}}
+@media print{html,body{background:#fff;color:#000;font-size:11pt}.wrap{max-width:none;padding:0}.theme{display:none}
+  h1,h2,h3,strong{color:#000}h1{border-bottom-color:#000}h2{border-top-color:#999;page-break-after:avoid}a{color:#000}
+  code,.scroll,h2#contents + ol,ol.srclist{background:#fff;border-color:#bbb;color:#000}thead th{background:#eee;color:#000}
+  .scroll{page-break-inside:avoid;overflow:visible}table{min-width:0;font-size:9pt}td,th{border-bottom-color:#ccc}}
+  
+/* Start-here primer for the non-specialist reader (editorial charter, rule 1) */
+aside.primer{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:18px 22px;margin:8px 0 34px;font-size:15.5px;line-height:1.6;max-width:none}
+aside.primer .primer-title{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 10px;max-width:none}
+aside.primer p{margin:0 0 10px;max-width:72ch}
+aside.primer p:last-child{margin-bottom:0}
+aside.primer em{font-style:italic;color:var(--ink)}
+@media print{aside.primer{background:#fff;border-color:#bbb}}
+  </style>
+  <script>(function(){try{var t=localStorage.getItem("kb-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+</head>
+<body>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+  <main class="wrap">
+    <p class="mark">CD Consulting R&amp;D</p>
+    <nav class="crumbs" lang="en"><a href="../index.html">Home</a> · <a href="./">KB-PHI</a> · Entry 1</nav>
+    <p class="cartouche" lang="en">KB-PHI · Entry 1 · Published 9 September 2026 · Version 1</p>
+<h1>« The Mystery of Consciousness » (Searle, 1997) — synthèse du livre et de ses commentaires</h1>
+<p class="standfirst" lang="en">Six rival theories of consciousness graded by one philosopher in 1997, and what the research of 2025 makes of his verdicts — a two-page synthesis, in French.</p>
+<p class="meta-line" lang="en">Synthesis note written in French on 9 September 2026. It rests on a complete reading of the 1997 edition and on a literature search run on 2026-09-09; the chapter-by-chapter report and the annotated literature review are published as the second entry of this chapter.</p>
+<aside class="primer" lang="en">
+<p class="primer-title">Start here — if the subject is new to you</p>
+<p> John Searle (1932–2025) was an American philosopher of mind and language, best known for the <em>Chinese room</em> argument of 1980: a person following rules to shuffle Chinese symbols can pass for a Chinese speaker without understanding a word — so running a program is not the same as having a mind.</p>
+<p><em>The Mystery of Consciousness</em> (1997) collects six review essays he wrote for the <em>New York Review of Books</em> on the rival theories of consciousness of the 1990s — a Nobel-winning biologist, a mathematical physicist, three philosophers and a physician — each measured against his own position: consciousness is a biological feature of the brain, caused by neurons, real and irreducible, and not a computation.</p>
+<p>Why it matters: the questions the book sorted out in 1997 — what counts as explaining consciousness, whether a machine could have one — are back, with large language models as the new Chinese room and a 2025 experiment pitting the leading theories against each other. This note, in French, summarises the book in two pages and reads it against the research of 2025.</p>
+</aside>
+<h2 id="contents" lang="en">Contents</h2>
+<ol>
+<li><a href="#1-le-livre">1. Le livre</a></li>
+<li><a href="#2-les-six-positions-une-ligne-chacune">2. Les six positions, à une ligne chacune</a></li>
+<li><a href="#3-les-commentaires">3. Les commentaires</a></li>
+<li><a href="#4-ce-qu-il-faut-en-retenir">4. Ce qu'il faut en retenir</a></li>
+<li><a href="#5-sources">5. Sources</a></li>
+</ol>
+
+<h2 id="1-le-livre">1. Le livre</h2>
+<p>John R. Searle, <strong>The Mystery of Consciousness</strong> (New York Review Books, 1997) <a class="ref" href="#S1">[S1]</a>, rassemble six recensions parues dans la <em>New York Review of Books</em> entre 1995 et 1997 <a class="ref" href="#S2">[S2]</a>, encadrées par l'exposé de sa propre position et suivies, pour deux d'entre elles, de la réponse de l'auteur recensé et de la réplique de Searle. C'est le document d'époque de la « décennie de la conscience » : au moment où le sujet redevient scientifiquement respectable, un philosophe passe en revue les six programmes concurrents et les mesure à une même toise.</p>
+<p>La toise, c'est le <strong>naturalisme biologique</strong> : la conscience est un phénomène biologique ordinaire, causé par des processus neuronaux de bas niveau dont elle est en même temps une caractéristique de haut niveau — comme la solidité d'une table est causée par le comportement de ses molécules sans être une chose en plus de la table. De là : ni dualisme (un seul monde), ni matérialisme éliminatif (la conscience existe réellement et ne se réduit pas), et une méthode — chercher les corrélats neuronaux, établir la causalité par manipulation, puis dégager le mécanisme. L'irréductibilité tient à l'ontologie : la conscience n'existe qu'à la première personne ; pour elle, et pour elle seule, l'apparence EST la réalité.</p>
+<p>Le <a href="6b1d.html" rel="noopener noreferrer" target="_blank">compte-rendu par chapitre et la revue de littérature</a>, seconde entrée de ce chapitre, donnent le détail de ce que cette synthèse résume.</p>
+
+<h2 id="2-les-six-positions-une-ligne-chacune">2. Les six positions, à une ligne chacune</h2>
+<ul><li><strong>Crick</strong> (l'« hypothèse stupéfiante », le liage à 40 Hz) : bonne neurobiologie, philosophie confuse — il prêche l'élimination en pratiquant l'explication causale, et confond corrélat et cause.</li><li><strong>Edelman</strong> (darwinisme neuronal, réentrée, mémoire comme recatégorisation) : la théorie la plus profonde du lot — mais rien n'y montre pourquoi tout cet appareil produirait du ressenti.</li><li><strong>Penrose</strong> (Gödel, puis microtubules quantiques) : même la simulation de la conscience serait impossible ; Searle répond que l'argument gödelien ne vaut qu'au niveau normatif du raisonnement mathématique, pas au niveau des processus cérébraux bruts, simulables comme n'importe quel phénomène naturel.</li><li><strong>Dennett</strong> (la conscience comme machine virtuelle et effets de mèmes) : pour Searle, une négation pure et simple des données — « Hamlet sans le prince de Danemark » ; l'échange joint est d'une brutalité restée célèbre.</li><li><strong>Chalmers</strong> (le « hard problem » <a class="ref" href="#S4">[S4]</a>, dualisme de propriétés + fonctionnalisme) : Searle y voit une cascade d'absurdités consenties (conscience explicativement inerte, thermostats conscients) ; l'échange joint est le plus substantiel du livre.</li><li><strong>Rosenfield</strong> (image du corps, soi, mémoire) : lecture bienveillante — toute conscience commence par l'expérience du corps, construite dans le cerveau.</li></ul>
+<p>Deux arguments propres structurent l'ensemble : la <strong>chambre chinoise</strong> (la syntaxe ne suffit pas à la sémantique — donc un programme n'est pas un esprit) et, plus radical, l'<strong>observateur-relativité du calcul</strong> (rien n'est intrinsèquement un ordinateur ; « calcul » est une interprétation que nous projetons sur la physique — donc « le cerveau est-il un ordinateur ? » est une question mal posée).</p>
+
+<h2 id="3-les-commentaires">3. Les commentaires</h2>
+<p><strong>La contre-pièce du dossier</strong> : Araujo (2013) <a class="ref" href="#S3">[S3]</a> retourne le procédé du livre contre son auteur — le naturalisme biologique, suivi des années 1980 aux derniers écrits, y est jugé logiquement incohérent : dire que le cerveau « cause » une conscience qui est « une caractéristique » du cerveau nomme le problème plus qu'il ne le résout. C'est aussi, au fond, la réplique de Chalmers dans le livre même : « les cerveaux causent la conscience » énonce la question, pas la réponse.</p>
+<p><strong>L'épreuve du programme, trente ans après</strong> : la collaboration adversariale IIT/GNWT (<em>Nature</em>, 2025 <a class="ref" href="#S5">[S5]</a> — 256 sujets, trois techniques d'imagerie, prédictions préenregistrées) exécute à la lettre la méthode que la conclusion du livre appelait. Résultat : le cortex postérieur suffit à la conscience perceptive, le préfrontal et la « diffusion globale » ne sont pas nécessaires — chaque théorie sort à moitié corroborée, et le mécanisme causal manque toujours. Le « secret honteux » que Searle avouait en 1997 (pas de principe théorique unificateur du cerveau) est toujours d'actualité, et le hard problem de Chalmers, formulé l'année des premiers articles du livre, tient sa trentième année (<em>Frontiers in Psychology</em>, 2025 <a class="ref" href="#S6">[S6]</a>).</p>
+<p><strong>Le retour de la chambre chinoise</strong> : les grands modèles de langage ont rendu à l'argument de 1980 une actualité que rien ne laissait prévoir en 1997 — le débat académique sur le « sens » des sorties de LLM se structure explicitement autour du couple Turing/Searle (<em>Inquiry</em>, 2025 <a class="ref" href="#S7">[S7]</a> ; Harnad, 2024 <a class="ref" href="#S8">[S8]</a>). En sens inverse, la question « une machine peut-elle être consciente ? » est devenue un programme de recherche gradué (Butlin, Long et al., 2023/2025 <a class="ref" href="#S9">[S9]</a> : indicateurs dérivés des théories ; Chalmers, 2023 <a class="ref" href="#S10">[S10]</a> : « probablement pas aujourd'hui, mais les obstacles sont révisables ») — un cadre probabiliste étranger au tranchant du livre.</p>
+<p><strong>Les protagonistes</strong> : Dennett est mort en avril 2024 <a class="ref" href="#S12">[S12]</a>, Searle en septembre 2025 <a class="ref" href="#S11">[S11]</a> (Crick en 2004, Edelman en 2014) ; les deux voix de l'échange le plus violent du livre se sont tues à dix-huit mois d'écart. Les nécrologies de 2025 rappellent aussi le versant sombre du dossier Searle (accusations de harcèlement, retrait du statut d'émérite en 2019) : la réévaluation de l'œuvre se fait désormais sous cette double lumière.</p>
+
+<h2 id="4-ce-qu-il-faut-en-retenir">4. Ce qu'il faut en retenir</h2>
+<p>Un livre-outil plus qu'un livre-thèse : la distinction réduction causale / réduction éliminative, le couple objectivité épistémique / subjectivité ontologique et la critique du « corrélat qui n'explique rien » restent d'usage courant ; les expositions de Gödel, de la mécanique quantique et du fonctionnalisme y sont exemplaires. La thèse propre, elle, demeure un manifeste : la promesse d'une dissolution du mystère « à la manière du vitalisme » attend toujours sa biochimie. Comme document, enfin, il est irremplaçable : on y voit, à pièces complètes, la science de la conscience naissante choisir ses questions — et l'on comprend, en le refermant, pourquoi ce sont encore les nôtres.</p>
+
+<h2 id="5-sources">5. Sources</h2>
+<p>Sources principales de cette synthèse ; la liste complète, typée et commentée, figure dans le <a href="6b1d.html" rel="noopener noreferrer" target="_blank">rapport détaillé</a> (sections 5 et 6). Adresses consultées le 9 septembre 2026.</p>
+<ol class="srclist">
+<li id="S1"><span class="tag">S1</span> John R. Searle, <em>The Mystery of Consciousness</em>, New York Review Books, New York, 1997, ISBN 0-940322-06-4 (avec les échanges avec Daniel Dennett et David Chalmers) — lecture intégrale, pagination d'origine. Page de l'éditeur : <a href="https://www.nyrb.com/products/the-mystery-of-consciousness" rel="noopener noreferrer" target="_blank">https://www.nyrb.com/products/the-mystery-of-consciousness</a></li>
+<li id="S2"><span class="tag">S2</span> John R. Searle, « The Mystery of Consciousness », <em>The New York Review of Books</em>, 2 novembre 1995 — article-source du livre. <a href="https://www.nybooks.com/articles/1995/11/02/the-mystery-of-consciousness/" rel="noopener noreferrer" target="_blank">https://www.nybooks.com/articles/1995/11/02/the-mystery-of-consciousness/</a></li>
+<li id="S3"><span class="tag">S3</span> Saulo de Freitas Araujo, « Searle's New Mystery, or, How Not to Solve the Problem of Consciousness », <em>Rivista internazionale di Filosofia e Psicologia</em>, 4(1), 2013, pp. 1-12, DOI 10.4453/rifp.2013.0001 — article évalué par les pairs, lu intégralement.</li>
+<li id="S4"><span class="tag">S4</span> David J. Chalmers, « Facing Up to the Problem of Consciousness », <em>Journal of Consciousness Studies</em>, 2(3), 1995, pp. 200-219 — article évalué par les pairs, lu intégralement.</li>
+<li id="S5"><span class="tag">S5</span> Cogitate Consortium, « Adversarial testing of global neuronal workspace and integrated information theories of consciousness », <em>Nature</em>, 2025, DOI 10.1038/s41586-025-08888-1 — <a href="https://www.nature.com/articles/s41586-025-08888-1" rel="noopener noreferrer" target="_blank">https://www.nature.com/articles/s41586-025-08888-1</a></li>
+<li id="S6"><span class="tag">S6</span> J. D. Gomez, « A harder problem of consciousness: reflections on a 50-year quest for the alchemy of qualia », <em>Frontiers in Psychology</em>, 2025, DOI 10.3389/fpsyg.2025.1592628 — <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1592628/full" rel="noopener noreferrer" target="_blank">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1592628/full</a></li>
+<li id="S7"><span class="tag">S7</span> « LLMs, Turing tests and Chinese rooms: the prospects for meaning in large language models », <em>Inquiry</em>, en ligne janvier 2025, DOI 10.1080/0020174X.2024.2446241 — <a href="https://www.tandfonline.com/doi/full/10.1080/0020174X.2024.2446241" rel="noopener noreferrer" target="_blank">https://www.tandfonline.com/doi/full/10.1080/0020174X.2024.2446241</a></li>
+<li id="S8"><span class="tag">S8</span> Stevan Harnad, « Language Writ Large: LLMs, ChatGPT, Grounding, Meaning and Understanding », arXiv:2402.02243, 2024 — <a href="https://arxiv.org/abs/2402.02243" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2402.02243</a></li>
+<li id="S9"><span class="tag">S9</span> Patrick Butlin, Robert Long et al., « Consciousness in Artificial Intelligence: Insights from the Science of Consciousness », arXiv:2308.08708, 2023 — <a href="https://arxiv.org/abs/2308.08708" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2308.08708</a> ; puis « Identifying indicators of consciousness in AI systems », <em>Trends in Cognitive Sciences</em>, 2025 — <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(25)00286-4" rel="noopener noreferrer" target="_blank">cell.com, S1364-6613(25)00286-4</a></li>
+<li id="S10"><span class="tag">S10</span> David J. Chalmers, « Could a Large Language Model be Conscious? », arXiv:2303.07103, 2023 — <a href="https://arxiv.org/abs/2303.07103" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2303.07103</a></li>
+<li id="S11"><span class="tag">S11</span> « John Searle (1932-2025) », <em>Philosophy Now</em>, n° 171, 2025 — <a href="https://philosophynow.org/issues/171/John_Searle_1932-2025" rel="noopener noreferrer" target="_blank">https://philosophynow.org/issues/171/John_Searle_1932-2025</a> ; « Former UC Berkeley professor John Searle dies, leaves complicated legacy », <em>The Daily Californian</em>, 2025 — <a href="https://www.dailycal.org/news/obituary-news/former-uc-berkeley-professor-john-searle-dies-leaves-complicated-legacy/article_6132904a-9d96-4bb7-abff-27988d169a7a.html" rel="noopener noreferrer" target="_blank">https://www.dailycal.org/news/obituary-news/former-uc-berkeley-professor-john-searle-dies-leaves-complicated-legacy/article_6132904a-9d96-4bb7-abff-27988d169a7a.html</a></li>
+<li id="S12"><span class="tag">S12</span> « Daniel Dennett obituary », <em>Nature</em>, 2024 — <a href="https://www.nature.com/articles/d41586-024-01478-7" rel="noopener noreferrer" target="_blank">https://www.nature.com/articles/d41586-024-01478-7</a></li>
+</ol>
+<p>Le texte du livre est © 1997 NYREV, Inc. : seules de courtes citations créditées sont reprises, tout le reste est reformulé.</p>
+
+    <footer lang="en">
+      <p>This text is © CD Consulting R&amp;D and licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank">CC BY-NC-ND 4.0</a> (attribution, non-commercial, no derivatives). Quoted figures and sentences remain the property of their publishers, cited in the Sources section.</p>
+      <p class="backlinks"><a href="./">← KB-PHI</a> · <a href="../index.html">CD Consulting R&amp;D</a></p>
+    </footer>
+  </main>
+  <script>(function(){var b=document.getElementById("theme");b.addEventListener("click",function(){var r=document.documentElement;var cur=r.getAttribute("data-theme");var sys=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var now=(cur||sys)==="dark"?"light":"dark";r.setAttribute("data-theme",now);try{localStorage.setItem("kb-theme",now);}catch(e){}});})();</script>
+</body>
+</html>
