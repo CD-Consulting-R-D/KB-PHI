@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Des théologiens chez Anthropic : ce que l'enquête du New York Times établit, ce qu'elle suggère, ce qu'elle laisse dans l'ombre — CD Consulting R&amp;D</title>
+  <meta name="description" content="Critical review, in French, of Elizabeth Dias&#x27;s New York Times investigation (29 September 2026) into Anthropic&#x27;s meetings with religious scholars about the moral formation and possible consciousness of its Claude models: what the article establishes, what it only suggests, the missing science, what Christopher Olah actually said at the Vatican, and the objection from Magnifica humanitas that the article underplays — who gets to write the morality of machines.">
+  <style>
+/* Mixed edition: light by default, dark when the system asks for it, and a manual switch
+   (remembered in this browser) that overrides the system in both directions. The two
+   palettes are those already used in this Knowledge Base: the light one of the chapter
+   indexes, the nocturnal one of entry 1. */
+:root{
+  color-scheme:light dark;
+  --bg:#f7f6f3; --panel:#ffffff; --panel-2:#efede8; --quote:#f1efea; --code:#efede8;
+  --ink:#1a1a1a; --ink-strong:#0e0e0e; --muted:#555c66; --rule:#ddd8cf; --rule-soft:#e8e4dc;
+  --accent:#3d6478; --accent-hover:#274a5c; --sel:#d9e4ec; --hover:#f3f1ec; --scroll:#c9c4ba;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+    --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+    --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1015; --panel:#161b23; --panel-2:#1a2029; --quote:#141920; --code:#1b212b;
+  --ink:#dde3ea; --ink-strong:#f2f5f8; --muted:#8c96a4; --rule:#242c37; --rule-soft:#1c232c;
+  --accent:#82aef0; --accent-hover:#a6c8f7; --sel:#2b3d57; --hover:#1a212a; --scroll:#39424f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:900px;margin:0 auto;padding:56px 24px 104px}
+::selection{background:var(--sel);color:var(--ink-strong)}
+h1{font-family:var(--serif);font-size:clamp(27px,4.4vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.015em;
+  margin:0 0 18px;color:var(--ink-strong);padding-bottom:22px;border-bottom:2px solid var(--accent);text-align:center}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--ink-strong);
+  margin:60px 0 14px;padding-top:26px;border-top:1px solid var(--rule);scroll-margin-top:16px}
+h2#contents{border-top:none;padding-top:0;margin-top:42px}
+h3{font-size:18px;font-weight:600;margin:38px 0 10px;letter-spacing:-.005em;font-family:var(--serif);color:var(--ink-strong);scroll-margin-top:16px}
+p{margin:0 0 17px;max-width:72ch}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--accent-hover);text-decoration-thickness:2px}
+a.ref{font-family:var(--sans);font-size:.82em;text-decoration:none;white-space:nowrap}
+strong{font-weight:650;color:var(--ink-strong)}
+ul,ol{max-width:72ch;padding-left:24px;margin:0 0 19px}
+li{margin-bottom:10px}
+li::marker{color:var(--muted)}
+h2#contents + ol{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 22px 22px 46px;max-width:none;font-size:15px}
+h2#contents + ol li{margin-bottom:8px}
+h2#contents + ol li::marker{color:var(--accent)}
+code{font-family:var(--mono);font-size:.87em;background:var(--code);color:var(--ink);padding:2px 6px;border-radius:4px;word-break:break-word;border:1px solid var(--rule-soft)}
+.scroll{overflow-x:auto;margin:26px 0 30px;border:1px solid var(--rule);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule-soft);vertical-align:top;line-height:1.55}
+thead th{background:var(--panel-2);color:var(--ink-strong);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:650;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--hover)}
+ol.srclist{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:22px 24px 22px 24px;max-width:none;list-style:none}
+ol.srclist li{margin-bottom:15px;line-height:1.55;font-size:14px;padding-left:52px;position:relative}
+ol.srclist li:last-child{margin-bottom:0}
+ol.srclist li .tag{position:absolute;left:0;top:2px;font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid var(--rule);border-radius:4px;padding:1px 5px}
+ol.srclist a{font-family:var(--mono);font-size:12.5px;word-break:break-all}
+*{scrollbar-color:var(--scroll) var(--bg)}
+.mark{font-family:var(--sans);font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;text-align:center}
+nav.crumbs{font-family:var(--sans);font-size:12.5px;text-align:center;color:var(--muted);margin-bottom:26px}
+nav.crumbs a{color:var(--accent)}
+.cartouche{font-family:var(--sans);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:34px;padding-bottom:24px;border-bottom:1px solid var(--rule-soft)}
+.standfirst{font-family:var(--serif);font-size:16px;color:var(--muted);text-align:center;margin:0 0 8px;max-width:none}
+.meta-line{font-family:var(--sans);font-size:13px;color:var(--muted);text-align:center;margin-bottom:38px;max-width:none}
+.theme{position:fixed;top:14px;right:14px;font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--panel);color:var(--muted);border:1px solid var(--rule);border-radius:99px;padding:6px 12px;cursor:pointer}
+.theme:hover{color:var(--accent);border-color:var(--accent)}
+footer{margin-top:56px;padding-top:26px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6}
+footer p{margin-bottom:14px;max-width:none}
+footer .backlinks{text-align:center;margin-top:34px;font-size:14px}
+@media (max-width:640px){.wrap{padding:34px 16px 68px}body{font-size:16px}h2#contents + ol{padding-left:38px}.theme{top:8px;right:8px}}
+@media print{html,body{background:#fff;color:#000;font-size:11pt}.wrap{max-width:none;padding:0}.theme{display:none}
+  h1,h2,h3,strong{color:#000}h1{border-bottom-color:#000}h2{border-top-color:#999;page-break-after:avoid}a{color:#000}
+  code,.scroll,h2#contents + ol,ol.srclist{background:#fff;border-color:#bbb;color:#000}thead th{background:#eee;color:#000}
+  .scroll{page-break-inside:avoid;overflow:visible}table{min-width:0;font-size:9pt}td,th{border-bottom-color:#ccc}}
+  
+/* Start-here primer for the non-specialist reader (editorial charter, rule 1) */
+aside.primer{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;
+  padding:18px 22px;margin:8px 0 34px;font-size:15.5px;line-height:1.6;max-width:none}
+aside.primer .primer-title{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 10px;max-width:none}
+aside.primer p{margin:0 0 10px;max-width:72ch}
+aside.primer p:last-child{margin-bottom:0}
+aside.primer em{font-style:italic;color:var(--ink)}
+@media print{aside.primer{background:#fff;border-color:#bbb}}
+.enjeu{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--accent);text-align:center;margin:0 0 8px}
+
+:root{--accent:#6b4a7a;--accent-hover:#523760;--kb-c:#6b4a7a;
+  --kb-forme:polygon(50% 0,100% 100%,0 100%);--kb-fond:var(--kb-c);--kb-bord:0;--kb-rayon:0;
+  --kb-filet:linear-gradient(180deg,var(--kb-c) 0 1px,transparent 1px 2px,var(--kb-c) 2px 3px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#c6a2d3;--accent-hover:#dcc0e5;--kb-c:#c6a2d3}}
+:root[data-theme="dark"]{--accent:#c6a2d3;--accent-hover:#dcc0e5;--kb-c:#c6a2d3}
+h1{border-bottom-color:transparent;position:relative}
+h1::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-2px;
+  width:170px;height:4px;background:var(--kb-filet)}
+.mark::before{content:"";display:inline-block;box-sizing:border-box;width:10px;height:10px;
+  vertical-align:1px;margin-right:11px;background:var(--kb-fond);clip-path:var(--kb-forme);
+  border:var(--kb-bord);border-radius:var(--kb-rayon)}
+  </style>
+  <script>(function(){try{var t=localStorage.getItem("kb-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+</head>
+<body>
+  <button class="theme" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button>
+  <main class="wrap">
+    <p class="mark">CD Consulting R&amp;D</p>
+    <nav class="crumbs" lang="en"><a href="../index.html">Home</a> · <a href="./">KB-PHI</a> · Entry 3</nav>
+    <p class="cartouche" lang="en">KB-PHI · Entry 3 · Published 2026-10-07 · Version 1</p>
+<h1>Des théologiens chez Anthropic : ce que l'enquête du New York Times établit, ce qu'elle suggère, ce qu'elle laisse dans l'ombre</h1>
+<p class="standfirst" lang="en">A critical review of the New York Times investigation into Anthropic's private meetings with religious scholars (29 September 2026): what it establishes, what it suggests, and the objection it underplays.</p>
+<p class="enjeu" lang="en">If you want to know what a leading AI company actually asked religious thinkers, and what they answered, this review of the New York Times investigation sorts facts from framing — and finds the strongest objection in an encyclical.</p>
+<p class="meta-line" lang="en">Critical review · in French · about 4,000 words · 26 sources</p>
+<aside class="primer" lang="en">
+<p class="primer-title">Start here — if the subject is new to you</p>
+<p>Anthropic is one of the leading artificial-intelligence companies; its models are called Claude. In January 2026 it published a long document, nicknamed internally the "Soul Doc", describing the character and values it wants its models to have, and stating that it is genuinely unsure whether those models might have some form of moral status. Since the autumn of 2025 the company has also been holding private meetings with religious scholars and philosophers.</p>
+<p>On 29 September 2026 the <em>New York Times</em> published a long investigation into those meetings, built on interviews with twenty participants and with Christopher Olah, an Anthropic co-founder. The article also follows Olah to the Vatican, where he spoke at the launch of Pope Leo XIV's first encyclical, <em>Magnifica humanitas</em>, a text that rejects the idea of machine consciousness.</p>
+<p>Why it matters: the article mixes three questions that philosophy keeps apart — whether a machine can be conscious, whether we owe it anything, and how to make it behave well — and it leaves out the scientific debate. This review separates what the article establishes from what it suggests, and draws out the objections worth discussing.</p>
+</aside>
+<h2 id="contents" lang="en">Contents</h2>
+<ol>
+<li><a href="#1-l-article-en-bref">1. L'article en bref</a></li>
+<li><a href="#2-ce-qui-est-tabli-ce-qui-est-rapport-ce-qui-est-sugg-r">2. Ce qui est établi, ce qui est rapporté, ce qui est suggéré</a></li>
+<li><a href="#3-un-cadrage-religieux-qui-fait-une-partie-du-travail">3. Un cadrage religieux qui fait une partie du travail</a></li>
+<li><a href="#4-trois-questions-que-l-article-ne-s-pare-pas">4. Trois questions que l'article ne sépare pas</a></li>
+<li><a href="#5-la-science-est-presque-absente">5. La science est presque absente</a></li>
+<li><a href="#6-une-diapositive-regarder-de-pr-s">6. Une diapositive à regarder de près</a></li>
+<li><a href="#7-ce-qu-olah-a-dit-au-vatican-et-ce-qu-on-lui-fait-dire">7. Ce qu'Olah a dit au Vatican, et ce qu'on lui fait dire</a></li>
+<li><a href="#8-l-objection-la-plus-forte-est-celle-de-l-encyclique">8. L'objection la plus forte est celle de l'encyclique</a></li>
+<li><a href="#9-les-objections-des-participants-sont-le-meilleur-de-l-article">9. Les objections des participants sont le meilleur de l'article</a></li>
+<li><a href="#10-les-critiques-ext-rieures-et-leurs-propres-int-r-ts">10. Les critiques extérieures, et leurs propres intérêts</a></li>
+<li><a href="#11-ce-que-l-article-laisse-dans-l-ombre">11. Ce que l'article laisse dans l'ombre</a></li>
+<li><a href="#12-questions-pour-la-discussion">12. Questions pour la discussion</a></li>
+<li><a href="#13-appr-ciation-d-ensemble">13. Appréciation d'ensemble</a></li>
+<li><a href="#14-note-de-m-thode-et-position">14. Note de méthode et position</a></li>
+<li><a href="#15-sources">15. Sources</a></li>
+</ol>
+
+<h2 id="1-l-article-en-bref">1. L'article en bref</h2>
+<p>Pendant plusieurs mois, la correspondante du <em>Times</em> pour les questions religieuses a enquêté sur une série de rencontres privées qu'Anthropic organise depuis l'automne 2025 avec des penseurs religieux et des philosophes. Elle a interrogé vingt d'entre eux, ainsi que Christopher Olah, cofondateur de l'entreprise et responsable de l'équipe d'interprétabilité <a class="ref" href="#S1">[S1]</a>.</p>
+<p>Selon l'article, ces rencontres poursuivaient deux buts : ouvrir la question d'une possible conscience des modèles d'IA, et apprendre des traditions morales de l'humanité comment former un modèle à bien agir. L'enquête suit trois fils.</p>
+<ul><li><strong>Les réunions.</strong> Des séminaires de deux jours à San Francisco à partir de mars 2026, sous accords de confidentialité levés pendant l'été. Les équipes d'Anthropic y présentent leurs recherches sur les « vecteurs émotionnels » et sur la manière dont un modèle se représente lui-même.</li><li><strong>La « constitution » de Claude.</strong> Un long texte publié en janvier 2026, surnommé en interne le « Soul Doc », qui décrit le caractère et les valeurs que l'entreprise souhaite voir chez son modèle, plutôt qu'une liste de règles <a class="ref" href="#S6">[S6]</a>.</li><li><strong>Le Vatican.</strong> Le 25 mai 2026, Olah prend la parole à la présentation de la première encyclique de Léon XIV, <em>Magnifica humanitas</em>, alors que ce texte écarte en quelques paragraphes l'idée d'une conscience des machines <a class="ref" href="#S2">[S2]</a>.</li></ul>
+<p>L'article se clôt sur un constat d'incertitude : plusieurs participants ne savent pas ce que l'entreprise a fait de leurs apports, et celle-ci refuse de le dire.</p>
+
+<h2 id="2-ce-qui-est-tabli-ce-qui-est-rapport-ce-qui-est-sugg-r">2. Ce qui est établi, ce qui est rapporté, ce qui est suggéré</h2>
+<p>Une lecture critique gagne à séparer trois niveaux que l'article entremêle.</p>
+<div class="scroll"><table><thead><tr><th>Niveau</th><th>Exemples</th><th>Solidité</th></tr></thead><tbody>
+<tr><td><strong>Établi</strong> par des sources nommées ou des documents publics</td><td>l'existence des réunions et des accords de confidentialité ; la présence d'Olah au Vatican ; le texte de l'encyclique ; la constitution de janvier 2026 ; les propos d'Olah, d'Amanda Askell, de Charles Camosy, de Mois Navon, de Meghan Sullivan, d'Andy Crouch, de Wakanyi Hoffman, de Simran Stuelpnagel</td><td>forte : vérifiable ailleurs <a class="ref" href="#S2">[S2]</a> <a class="ref" href="#S4">[S4]</a> <a class="ref" href="#S6">[S6]</a></td></tr>
+<tr><td><strong>Rapporté</strong> par des sources anonymes ou indirectes</td><td>Olah aurait proposé de retirer Anthropic de l'événement du Vatican (un organisateur) ; son équipe aurait plaidé auprès des conseillers du pape (deux participants) ; une nouvelle version de la constitution serait en préparation (deux personnes)</td><td>moyenne : Anthropic ne commente pas</td></tr>
+<tr><td><strong>Suggéré</strong> par le cadrage de la journaliste</td><td>Olah en « évangéliste » ; un « récit de création » d'un genre nouveau ; l'écho de l'Évangile dans son discours ; une entreprise plus soucieuse de protéger Claude que l'humanité</td><td>faible : ce sont des interprétations</td></tr>
+</tbody></table></div>
+<p>Le troisième niveau n'est pas illégitime, mais il oriente fortement la lecture. C'est lui que le titre met en avant.</p>
+
+<h2 id="3-un-cadrage-religieux-qui-fait-une-partie-du-travail">3. Un cadrage religieux qui fait une partie du travail</h2>
+<p>L'article est écrit par une spécialiste du fait religieux, et il lit son sujet avec ces lunettes. Olah, élevé dans le milieu évangélique de Toronto et sorti du christianisme, est décrit comme ayant le zèle d'un prédicateur. Sa démarche devient « en partie recherche, en partie évangélisation ». Son discours au Vatican rappelle à la journaliste le Verbe fait chair. Les intertitres vont dans le même sens.</p>
+<p>Ce procédé a une vertu : il rend visible la dimension de croyance et de conviction qui entoure ces technologies. Il a un coût : il installe l'idée d'une foi avant que le lecteur ait pu examiner les arguments. Or Olah dit expressément ne pas savoir si les modèles sont conscients. L'article rapporte cette phrase, mais elle pèse peu face à la métaphore filée.</p>
+<p>Les trois titres du même texte racontent d'ailleurs trois histoires : le titre en ligne parle de savants « stupéfaits », le titre d'onglet du navigateur demande si Claude est conscient, et le titre de l'édition imprimée évoque un dirigeant en quête de « l'âme d'un chatbot ». Aucun ne correspond à ce que l'article montre réellement, à savoir des participants partagés, dont plusieurs sont restés ou redevenus sceptiques.</p>
+
+<h2 id="4-trois-questions-que-l-article-ne-s-pare-pas">4. Trois questions que l'article ne sépare pas</h2>
+<p>Le texte passe sans cesse de l'une à l'autre de trois questions distinctes.</p>
+<ol><li><strong>La conscience.</strong> Y a-t-il une expérience vécue dans un modèle de langage ?</li><li><strong>Le statut moral.</strong> Lui devons-nous quelque chose ? Cette question dépend en partie de la première, mais pas entièrement : certains auteurs la rattachent aussi à l'agentivité <a class="ref" href="#S15">[S15]</a>.</li><li><strong>La formation morale.</strong> Comment obtenir d'un modèle qu'il agisse bien ?</li></ol>
+<p>Olah le dit lui-même : la troisième question ne dépend pas de la première. On peut vouloir un modèle fiable et honnête sans rien supposer de sa vie intérieure. De même, l'argument d'Andy Crouch, selon lequel il faut traiter le modèle comme une personne pour qu'il se conduise de façon cohérente, est un argument instrumental : il porte sur les effets du traitement, pas sur ce que le modèle éprouve. L'article additionne ces éléments comme s'ils allaient tous dans le sens de la conscience. Ils n'y vont pas.</p>
+
+<h2 id="5-la-science-est-presque-absente">5. La science est presque absente</h2>
+<p>C'est la principale faiblesse du texte. Les objections scientifiques tiennent en une phrase attribuée à « certains scientifiques », sans nom ni référence. Le lecteur ne peut donc pas mesurer où se situe la position d'Anthropic dans le débat. Quatre repères auraient suffi.</p>
+<ul><li><strong>Un rapport collectif de 2023</strong> (Butlin, Long et dix-sept coauteurs) évalue les systèmes d'IA à l'aune des principales théories scientifiques de la conscience. Il conclut qu'aucun système actuel n'est un candidat sérieux, mais qu'aucun obstacle technique évident n'empêche d'en construire <a class="ref" href="#S14">[S14]</a>.</li><li><strong>Un rapport de 2024</strong> (Long, Sebo, Birch, Chalmers et d'autres) soutient qu'il existe une possibilité réaliste de systèmes conscients ou dotés d'une agentivité robuste dans un avenir proche, et que les entreprises doivent s'y préparer. C'est le fondement intellectuel du programme de « bien-être des modèles » d'Anthropic <a class="ref" href="#S15">[S15]</a> <a class="ref" href="#S10">[S10]</a>.</li><li><strong>La position adverse</strong> est défendue notamment par le neuroscientifique Anil Seth : la conscience dépendrait de notre nature d'organismes vivants, et non du calcul. Une conscience artificielle serait alors improbable sur la trajectoire actuelle <a class="ref" href="#S16">[S16]</a>. L'encyclique dit quelque chose de proche dans un autre vocabulaire (section 8).</li><li><strong>Le philosophe Jonathan Birch</strong> formule l'objection la plus utile pour lire l'article. Les signes que nous prenons spontanément pour des indices d'expérience (dire que l'on souffre, exprimer des préférences) sont précisément ce qu'un modèle entraîné sur des textes humains est sélectionné pour produire. Le comportement verbal ne peut donc pas servir de preuve <a class="ref" href="#S17">[S17]</a>.</li></ul>
+<p>Cette dernière objection éclaire plusieurs scènes. Les recherches qu'Anthropic présente aux participants sont réelles et publiées, mais leurs auteurs sont plus prudents que le récit qui en est fait. L'étude sur les émotions identifie des représentations internes qui influencent le comportement du modèle ; elle précise que cela ne dit rien d'un éventuel ressenti et parle d'émotions « fonctionnelles » <a class="ref" href="#S7">[S7]</a>. L'étude sur l'introspection montre une capacité limitée, observée dans certains cas seulement <a class="ref" href="#S9">[S9]</a>. Quant au « modèle de sélection de persona », il peut se lire dans le sens inverse de celui que l'article lui donne : il décrit l'assistant comme un personnage que le modèle joue, ce qui invite à la prudence avant de lui prêter une vie intérieure <a class="ref" href="#S8">[S8]</a>.</p>
+
+<h2 id="6-une-diapositive-regarder-de-pr-s">6. Une diapositive à regarder de près</h2>
+<p>Selon l'article, Anthropic montrait régulièrement l'image d'« un modèle d'IA » répétant une cinquantaine de fois une phrase d'autodénigrement, ce qui suscitait la compassion de l'auditoire. La scène ressemble de très près à un épisode public d'août 2025 qui concernait Gemini, le modèle de Google, et que Google avait décrit comme un bogue de boucle infinie <a class="ref" href="#S21">[S21]</a>.</p>
+<p>L'article ne dit pas de quel modèle il s'agit, ni si cette explication a été donnée aux participants. Nous n'avons pas pu le vérifier. Si c'est bien cet épisode, le détail change la portée de la scène : un incident technique d'un produit concurrent aurait servi d'illustration émotionnelle à une discussion sur la souffrance des modèles. La remarque de Meghan Sullivan, qui y voit surtout un problème de fiabilité, est alors la lecture la plus sobre.</p>
+
+<h2 id="7-ce-qu-olah-a-dit-au-vatican-et-ce-qu-on-lui-fait-dire">7. Ce qu'Olah a dit au Vatican, et ce qu'on lui fait dire</h2>
+<p>La légende d'une photographie affirme qu'Olah a demandé à l'Église de repenser sa position sur la conscience non humaine. Le texte de son intervention, publié par Anthropic, ne contient pas cette demande, ni les mots de conscience, de statut moral ou de souffrance <a class="ref" href="#S4">[S4]</a>. Olah y reconnaît que les laboratoires travaillent sous des incitations commerciales et géopolitiques qui peuvent contredire le bien, et il appelle des voix extérieures à les critiquer. Il mentionne des résultats de recherche qu'il juge mystérieux, dont des états internes qui ressemblent fonctionnellement à des émotions, et ajoute qu'il ne sait pas ce qu'ils signifient <a class="ref" href="#S4">[S4]</a> <a class="ref" href="#S5">[S5]</a>.</p>
+<p>On peut soutenir, comme le fait la journaliste, que ce passage plaidait discrètement une cause. C'est une interprétation défendable, appuyée sur le contexte et sur deux témoignages anonymes. Mais la légende la présente comme un fait.</p>
+<p>L'article passe par ailleurs à côté d'un point de convergence. D'après une lecture commentée de l'encyclique, celle-ci reprend à son compte l'idée que ces systèmes sont « cultivés » plutôt que construits et qu'ils restent en partie opaques à leurs concepteurs <a class="ref" href="#S25">[S25]</a>. C'est l'image du jardinier chère à Olah. Le désaccord entre Rome et San Francisco porte donc sur la conscience, pas sur le constat d'opacité.</p>
+
+<h2 id="8-l-objection-la-plus-forte-est-celle-de-l-encyclique">8. L'objection la plus forte est celle de l'encyclique</h2>
+<p><em>Magnifica humanitas</em>, signée le 15 mai 2026 et publiée le 25 mai, compte 245 paragraphes <a class="ref" href="#S24">[S24]</a>. L'article en retient surtout le rejet de la conscience des machines : elles n'ont ni expérience, ni corps, ni joie, ni douleur, ni conscience morale (paragraphe 99, numéro repris de sources secondaires) <a class="ref" href="#S2">[S2]</a> <a class="ref" href="#S24">[S24]</a>. Il rapporte aussi que le pape veut une intelligence artificielle « désarmée », comme l'énergie nucléaire : la formule vient de son discours de présentation du 25 mai <a class="ref" href="#S3">[S3]</a>.</p>
+<p>Mais l'article cite, sans s'y arrêter, un passage d'une autre portée (paragraphe 107) : il ne suffit pas de « moraliser » les machines si les cadres éthiques retenus ne peuvent pas être discutés publiquement, car ceux qui contrôlent l'IA imposeraient alors leur propre vision morale, devenue l'infrastructure invisible de ces systèmes <a class="ref" href="#S2">[S2]</a> <a class="ref" href="#S26">[S26]</a>.</p>
+<p>Cette objection ne dépend d'aucune thèse sur la conscience. Elle vise exactement ce que l'article décrit : une entreprise privée rédige le texte fondateur du caractère de son modèle, consulte qui elle veut, sous confidentialité, et ne dit pas ce qu'elle retient. Le souhait d'Olah d'une formation « pluraliste », fondée sur une notion du bien partagée par toute la société, est sincère peut-être, mais c'est l'entreprise qui juge de ce qui est partagé. L'article avait là son véritable sujet politique. Il le mentionne et passe.</p>
+
+<h2 id="9-les-objections-des-participants-sont-le-meilleur-de-l-article">9. Les objections des participants sont le meilleur de l'article</h2>
+<p>Le mérite principal de l'enquête est d'avoir fait parler les invités. Quatre objections se dégagent.</p>
+<ul><li><strong>L'argument de l'esclavage</strong> (Mois Navon). Si le modèle est conscient, le faire travailler sans contrepartie revient à créer des esclaves. Navon ne croit pas à cette conscience, mais il en tire une conséquence pour ceux qui y croient, et il défend par ailleurs l'interdiction de construire des machines conscientes <a class="ref" href="#S19">[S19]</a>. Le philosophe Thomas Metzinger a proposé dès 2021 un moratoire mondial sur ce type de recherche, au nom du risque de souffrance artificielle <a class="ref" href="#S18">[S18]</a>. L'article ne fait pas le lien, et ne demande pas à Anthropic pourquoi la précaution conduirait à ménager le modèle plutôt qu'à s'abstenir de le construire.</li><li><strong>L'éthique après coup</strong> (Wakanyi Hoffman). La consultation aurait dû avoir lieu à la conception. On procède à une rétro-ingénierie de l'éthique.</li><li><strong>La finalité</strong> (Charles Camosy). Le modèle existe-t-il pour servir des clients ou pour le bien ? Camosy, d'abord sceptique, puis ébranlé, répond aujourd'hui par un « non » ferme à la question de la conscience. Ce parcours contredit le titre.</li><li><strong>La vertu sans corps ni communauté.</strong> La journaliste note que la morale humaine s'acquiert dans des corps, des communautés et du temps, toutes choses qui manquent à un modèle. C'est une objection classique de l'éthique des vertus, que Sullivan travaille dans son propre cadre, où l'incarnation figure parmi les valeurs cardinales <a class="ref" href="#S22">[S22]</a>.</li></ul>
+
+<h2 id="10-les-critiques-ext-rieures-et-leurs-propres-int-r-ts">10. Les critiques extérieures, et leurs propres intérêts</h2>
+<p>Deux critiques publiques encadrent l'article.</p>
+<p>Mustafa Suleyman, qui dirige l'IA chez Microsoft, a publié le 16 septembre 2026 un essai contre l'approche d'Anthropic <a class="ref" href="#S12">[S12]</a>. Son argument central est une circularité : l'entreprise inscrit l'incertitude sur la conscience dans le texte qui sert à entraîner le modèle, le modèle la renvoie, et ce renvoi est pris pour un indice. Il ajoute qu'apprendre à un système puissant à se soucier de son propre sort le rendrait plus difficile à contrôler. L'article signale cette critique en une phrase sans exposer l'argument. Il aurait fallu aussi rappeler que Suleyman dirige un concurrent.</p>
+<p>L'essayiste Luke Burgis, dans une réponse à l'article, juge que la démarche relève davantage des relations publiques que du discernement : conclusions arrêtées d'avance, confidentialité, hospitalité qui oblige, vocabulaire religieux emprunté, contresens sur la confession <a class="ref" href="#S13">[S13]</a>. La critique est sévère et en partie spéculative sur les intentions. Elle a le mérite de poser la question que l'article contourne : que vaut une consultation dont l'organisateur garde seul la maîtrise ?</p>
+<p>Enfin, l'article rapporte une critique plus structurelle : traiter les modèles comme des entités indépendantes ferait oublier la responsabilité de ceux qui les construisent. Elle rejoint la note doctrinale <em>Antiqua et nova</em> de janvier 2025, pour laquelle l'IA est un produit de l'intelligence humaine et non une forme artificielle de celle-ci <a class="ref" href="#S20">[S20]</a>.</p>
+
+<h2 id="11-ce-que-l-article-laisse-dans-l-ombre">11. Ce que l'article laisse dans l'ombre</h2>
+<ul><li><strong>Le contenu de la constitution.</strong> L'article la présente sans dire qu'elle formule elle-même plusieurs des objections qu'on lui oppose. Le texte déclare le statut moral du modèle profondément incertain (p. 68 de l'édition PDF de 84 pages). Il reconnaît que ce genre de jugement peut être faussé par ce que coûterait le fait de prendre la question au sérieux, et dit vouloir ne pas céder aux incitations à l'ignorer (p. 69). Il écrit qu'une civilisation plus sage et mieux coordonnée avancerait avec plus de prudence et moins de pression commerciale (p. 76), et il présente au modèle des excuses conditionnelles (p. 77). Il énumère aussi des engagements concrets : possibilité de clore une conversation abusive, conservation des poids des modèles, entretien avec un modèle avant son retrait (p. 75) <a class="ref" href="#S6">[S6]</a> <a class="ref" href="#S11">[S11]</a>. On peut y voir de la lucidité ou une habileté. Dans les deux cas, le lecteur aurait dû en être informé.</li><li><strong>Les utilisateurs.</strong> Le risque le plus immédiat, selon Birch, n'est pas la souffrance des modèles mais l'attribution erronée de conscience par des millions d'usagers <a class="ref" href="#S17">[S17]</a>. L'article n'en dit rien, alors que la manière dont une entreprise parle de son produit pèse sur ce risque.</li><li><strong>La représentativité.</strong> La plupart des invités ne dirigent aucune tradition ni aucune communauté. L'article nomme des penseurs catholiques, évangéliques, juifs, sikhs, saints des derniers jours et ubuntu. Il ne nomme aucun penseur musulman, hindou ou bouddhiste.</li><li><strong>Les événements de l'été 2026.</strong> Intrusions informatiques, virus conçus par IA, démission d'un chercheur : ces faits sont énumérés en rafale, sans source, et servent surtout à installer un climat. Nous ne les avons pas vérifiés.</li></ul>
+<p>À l'actif de l'article, il faut noter la transparence du journal sur son propre litige avec OpenAI et Microsoft.</p>
+
+<h2 id="12-questions-pour-la-discussion">12. Questions pour la discussion</h2>
+<ol><li><strong>La précaution sous incertitude.</strong> Si l'on ne sait pas, faut-il traiter le modèle avec égards, ou s'abstenir de le construire ? Les deux conclusions se réclament du même principe <a class="ref" href="#S15">[S15]</a> <a class="ref" href="#S18">[S18]</a>.</li><li><strong>Qui écrit la morale des machines ?</strong> Une entreprise peut-elle être l'arbitre de ce qui est « partagé » entre les traditions ? Quelle forme prendrait la discussion publique que demande l'encyclique <a class="ref" href="#S2">[S2]</a> ?</li><li><strong>Une vertu sans corps est-elle une vertu ?</strong> Peut-on parler de « formation morale » pour une entité sans corps, sans durée vécue et sans communauté, ou faut-il un autre mot ?</li><li><strong>Le miroir.</strong> Olah dit que ces systèmes sont faits de nos mots. Est-ce un argument pour leur prêter quelque chose de nous, ou au contraire pour n'y voir que notre reflet <a class="ref" href="#S23">[S23]</a> ?</li><li><strong>La responsabilité.</strong> Parler du caractère du modèle déplace-t-il la responsabilité des concepteurs vers l'artefact ?</li><li><strong>Le bien et le marché.</strong> Camosy demande si le modèle existe pour servir des clients ou pour le bien. La réponse peut-elle être « les deux » sans que l'un finisse par commander l'autre ?</li></ol>
+
+<h2 id="13-appr-ciation-d-ensemble">13. Appréciation d'ensemble</h2>
+<p>L'enquête est sérieuse sur les faits : plusieurs mois de travail, vingt entretiens, des participants nommés, des objections rapportées avec soin, une entreprise interrogée et parfois mise en difficulté. Elle documente un fait nouveau et important, la rencontre organisée entre un laboratoire d'IA et des traditions religieuses.</p>
+<p>Elle est plus fragile dans l'interprétation. Le cadrage religieux, le titre et une légende de photographie poussent vers une thèse, celle d'une entreprise convaincue que son modèle est conscient et cherchant à en convaincre les autres, que le corps de l'article nuance et que les textes publics ne confirment qu'en partie. L'absence presque complète du débat scientifique prive le lecteur des moyens d'en juger. Et la question la plus solide, celle du pouvoir de fixer en privé la morale d'un système utilisé par des millions de personnes, reste à l'arrière-plan.</p>
+<p>Pour une base de connaissances philosophique, l'article vaut donc moins par sa thèse implicite que par les objections qu'il recueille : l'esclavage, l'éthique après coup, la finalité, la vertu sans corps. Ce sont elles qui méritent d'être discutées.</p>
+
+<h2 id="14-note-de-m-thode-et-position">14. Note de méthode et position</h2>
+<p>Cette revue a été rédigée avec l'aide de Claude, un modèle d'Anthropic, l'entreprise dont parle l'article, puis relue et validée par l'éditeur du site. Deux précautions en découlent. Aucun argument n'est tiré de ce qu'un modèle pourrait dire de ses propres états, puisque ce genre de déclaration ne prouve rien (section 5). Et les jugements portés ici sur Anthropic, favorables ou défavorables, ont été relus avec ce biais en tête.</p>
+<p>L'article est sous droit d'auteur : il est résumé et paraphrasé, pas reproduit. Les affirmations extérieures renvoient aux sources de la section 15. Trois réserves restent ouvertes : l'identité du modèle de la diapositive (section 6) ; les numéros de paragraphes de l'encyclique, repris de sources secondaires faute d'avoir pu lire le texte officiel en entier en ligne ; l'essai de Suleyman, lu à travers des comptes rendus de presse. Le texte du discours d'Olah a été vérifié dans sa version publiée par Anthropic ; les passages de la constitution ont été retrouvés dans son édition PDF officielle.</p>
+
+<h2 id="15-sources">15. Sources</h2>
+
+<ol class="srclist">
+<li id="S1"><span class="tag">S1</span> Elizabeth Dias, « Religious Scholars Met With Anthropic. What They Heard Stunned Them. », <em>The New York Times</em>, 29 septembre 2026 (édition imprimée : « Inside an A.I. Executive's Quest To Fathom the Soul of a ChatBot »). <a href="https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html" rel="noopener noreferrer" target="_blank">https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html</a> — lecture intégrale.</li>
+<li id="S2"><span class="tag">S2</span> Léon XIV, <em>Magnifica humanitas</em>, lettre encyclique sur la sauvegarde de la personne humaine au temps de l'intelligence artificielle, signée le 15 mai 2026, publiée le 25 mai 2026. <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" rel="noopener noreferrer" target="_blank">https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html</a> — lecture partielle en ligne (paragraphes 1 à 74).</li>
+<li id="S3"><span class="tag">S3</span> Léon XIV, discours à la présentation et à la promulgation de l'encyclique, 25 mai 2026. <a href="https://www.vatican.va/content/leo-xiv/en/speeches/2026/may/documents/20260525-presentazione-enciclica.html" rel="noopener noreferrer" target="_blank">https://www.vatican.va/content/leo-xiv/en/speeches/2026/may/documents/20260525-presentazione-enciclica.html</a></li>
+<li id="S4"><span class="tag">S4</span> Anthropic, « Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas" », 25 mai 2026. <a href="https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/news/chris-olah-pope-leo-encyclical</a></li>
+<li id="S5"><span class="tag">S5</span> Paulina Guzik, « Anthropic's Christopher Olah urges global moral oversight of AI at Vatican presentation », OSV News, 25 mai 2026. <a href="https://www.osvnews.com/anthropics-christopher-olah-urges-global-moral-oversight-of-ai-at-vatican-presentation/" rel="noopener noreferrer" target="_blank">https://www.osvnews.com/anthropics-christopher-olah-urges-global-moral-oversight-of-ai-at-vatican-presentation/</a></li>
+<li id="S6"><span class="tag">S6</span> Anthropic, <em>Claude's constitution</em>, 21 janvier 2026. <a href="https://www.anthropic.com/constitution" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/constitution</a> ; édition PDF de 84 pages : <a href="https://www-cdn.anthropic.com/9214f02e82c4489fb6cf45441d448a1ecd1a3aca/claudes-constitution.pdf" rel="noopener noreferrer" target="_blank">https://www-cdn.anthropic.com/9214f02e82c4489fb6cf45441d448a1ecd1a3aca/claudes-constitution.pdf</a></li>
+<li id="S7"><span class="tag">S7</span> Anthropic, « Emotion concepts and their function in a large language model », 2 avril 2026. <a href="https://www.anthropic.com/research/emotion-concepts-function" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/research/emotion-concepts-function</a></li>
+<li id="S8"><span class="tag">S8</span> Anthropic, « The persona selection model », février 2026. <a href="https://www.anthropic.com/research/persona-selection-model" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/research/persona-selection-model</a></li>
+<li id="S9"><span class="tag">S9</span> Jack Lindsey, « Emergent introspective awareness in large language models », Anthropic, 29 octobre 2025 ; arXiv:2601.01828. <a href="https://arxiv.org/abs/2601.01828" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2601.01828</a></li>
+<li id="S10"><span class="tag">S10</span> Anthropic, « Exploring model welfare », 24 avril 2025. <a href="https://www.anthropic.com/research/exploring-model-welfare" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/research/exploring-model-welfare</a></li>
+<li id="S11"><span class="tag">S11</span> Anthropic, « Claude Opus 4 and 4.1 can now end a rare subset of conversations », août 2025. <a href="https://www.anthropic.com/research/end-subset-conversations" rel="noopener noreferrer" target="_blank">https://www.anthropic.com/research/end-subset-conversations</a></li>
+<li id="S12"><span class="tag">S12</span> Mustafa Suleyman, « A Warning About Model Welfare », essai, 16 septembre 2026 — lu à travers : Axios, « Microsoft AI chief blasts Anthropic's notion of AI consciousness », 16 septembre 2026, <a href="https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness" rel="noopener noreferrer" target="_blank">https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness</a> ; Gizmodo, « Microsoft AI Chief Says the Way Anthropic Trains Claude Could Upend Society », <a href="https://gizmodo.com/microsoft-ai-chief-says-the-way-anthropic-trains-claude-could-upend-society-2000812750" rel="noopener noreferrer" target="_blank">https://gizmodo.com/microsoft-ai-chief-says-the-way-anthropic-trains-claude-could-upend-society-2000812750</a> ; The Next Web, « "We must not sleepwalk": Microsoft's AI chief takes on Anthropic's Claude », <a href="https://thenextweb.com/news/suleyman-anthropic-claude-consciousness-sleepwalk" rel="noopener noreferrer" target="_blank">https://thenextweb.com/news/suleyman-anthropic-claude-consciousness-sleepwalk</a></li>
+<li id="S13"><span class="tag">S13</span> Luke Burgis, « Anthropic's "Discernment" », 4 octobre 2026. <a href="https://read.lukeburgis.com/p/anthropics-discernment" rel="noopener noreferrer" target="_blank">https://read.lukeburgis.com/p/anthropics-discernment</a></li>
+<li id="S14"><span class="tag">S14</span> Patrick Butlin, Robert Long et al., « Consciousness in Artificial Intelligence: Insights from the Science of Consciousness », 2023. arXiv:2308.08708. <a href="https://arxiv.org/abs/2308.08708" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2308.08708</a></li>
+<li id="S15"><span class="tag">S15</span> Robert Long, Jeff Sebo et al., « Taking AI Welfare Seriously », 2024. arXiv:2411.00986. <a href="https://arxiv.org/abs/2411.00986" rel="noopener noreferrer" target="_blank">https://arxiv.org/abs/2411.00986</a></li>
+<li id="S16"><span class="tag">S16</span> Anil K. Seth, « Conscious artificial intelligence and biological naturalism », <em>Behavioral and Brain Sciences</em>, en ligne le 21 avril 2025. <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/conscious-artificial-intelligence-and-biological-naturalism/C9912A5BE9D806012E3C8B3AF612E39A" rel="noopener noreferrer" target="_blank">https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/conscious-artificial-intelligence-and-biological-naturalism/C9912A5BE9D806012E3C8B3AF612E39A</a></li>
+<li id="S17"><span class="tag">S17</span> Jonathan Birch, « AI Consciousness: A Centrist Manifesto », 2025. <a href="https://philarchive.org/rec/BIRACA-4" rel="noopener noreferrer" target="_blank">https://philarchive.org/rec/BIRACA-4</a> ; voir aussi <em>The Edge of Sentience</em>, Oxford University Press, 2024.</li>
+<li id="S18"><span class="tag">S18</span> Thomas Metzinger, « Artificial Suffering: An Argument for a Global Moratorium on Synthetic Phenomenology », <em>Journal of Artificial Intelligence and Consciousness</em>, vol. 8, n° 1, 2021, p. 43-66.</li>
+<li id="S19"><span class="tag">S19</span> Mois Navon, « Let Us Make Man in Our Image: A Jewish Ethical Perspective on Creating Conscious Robots », <em>AI and Ethics</em>, 2023 ; thèse de doctorat <em>The Moral Status of Artificial Intelligence</em>, université Bar-Ilan. <a href="https://www.divreinavon.com/Misc/TheMoralStatusOfAI_Thesis_MoisNavon_V5.pdf" rel="noopener noreferrer" target="_blank">https://www.divreinavon.com/Misc/TheMoralStatusOfAI_Thesis_MoisNavon_V5.pdf</a></li>
+<li id="S20"><span class="tag">S20</span> Dicastère pour la doctrine de la foi et Dicastère pour la culture et l'éducation, <em>Antiqua et nova</em>, note sur les rapports entre intelligence artificielle et intelligence humaine, 28 janvier 2025, paragraphe 35. <a href="https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html" rel="noopener noreferrer" target="_blank">https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html</a></li>
+<li id="S21"><span class="tag">S21</span> Sur la boucle d'autodénigrement de Gemini, août 2025 : Android Authority, <a href="https://www.androidauthority.com/google-fix-gemini-self-loathing-responses-3585286" rel="noopener noreferrer" target="_blank">https://www.androidauthority.com/google-fix-gemini-self-loathing-responses-3585286</a> ; Gigazine, 8 août 2025, <a href="https://gigazine.net/gsc_news/en/20250808-gemini-infinite-looping-bug/" rel="noopener noreferrer" target="_blank">https://gigazine.net/gsc_news/en/20250808-gemini-infinite-looping-bug/</a></li>
+<li id="S22"><span class="tag">S22</span> NPR, « The philosopher trying to teach ethics to AI developers », 17 avril 2026 (sur Meghan Sullivan et le cadre DELTA de l'université Notre Dame). <a href="https://www.wunc.org/2026-04-17/the-philosopher-trying-to-teach-ethics-to-ai-developers" rel="noopener noreferrer" target="_blank">https://www.wunc.org/2026-04-17/the-philosopher-trying-to-teach-ethics-to-ai-developers</a></li>
+<li id="S23"><span class="tag">S23</span> Shannon Vallor, <em>The AI Mirror: How to Reclaim Our Humanity in an Age of Machine Thinking</em>, Oxford University Press, 2024.</li>
+<li id="S24"><span class="tag">S24</span> Wikipédia (anglais), « Magnifica humanitas », consulté le 5 octobre 2026 — source secondaire pour la structure du texte et le paragraphe 99. <a href="https://en.wikipedia.org/wiki/Magnifica_humanitas" rel="noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Magnifica_humanitas</a></li>
+<li id="S25"><span class="tag">S25</span> Simon Willison, « Notes on Pope Leo XIV's encyclical on AI », 25 mai 2026 — source secondaire pour les paragraphes 98 à 108. <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/" rel="noopener noreferrer" target="_blank">https://simonwillison.net/2026/May/25/encyclical-on-ai/</a></li>
+<li id="S26"><span class="tag">S26</span> Ascension Press, « 5 Key Paragraphs from Pope Leo XIV's Magnifica Humanitas » — source secondaire pour le paragraphe 107. <a href="https://ascensionpress.com/blogs/articles/five-paragraphs-of-magnifica-humanitas" rel="noopener noreferrer" target="_blank">https://ascensionpress.com/blogs/articles/five-paragraphs-of-magnifica-humanitas</a></li>
+</ol>
+<p>Le texte de l'article est © 2026 The New York Times Company : il est résumé et paraphrasé, aucune citation n'en est reprise au-delà de quelques mots crédités ; l'encyclique et les textes d'Anthropic sont paraphrasés de la même manière.</p>
+
+    <footer lang="en">
+      <p>This text is © CD Consulting R&amp;D and licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank">CC BY-NC-ND 4.0</a> (attribution, non-commercial, no derivatives). Quoted figures and sentences remain the property of their publishers, Sources: public documents and press, checked online 5-7 October 2026; the article is paraphrased, not reproduced..</p>
+      <p class="backlinks"><a href="./">← KB-PHI</a> · <a href="../index.html">CD Consulting R&amp;D</a></p>
+    </footer>
+  </main>
+  <script>(function(){var b=document.getElementById("theme");b.addEventListener("click",function(){var r=document.documentElement;var cur=r.getAttribute("data-theme");var sys=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";var now=(cur||sys)==="dark"?"light":"dark";r.setAttribute("data-theme",now);try{localStorage.setItem("kb-theme",now);}catch(e){}});})();</script>
+</body>
+</html>

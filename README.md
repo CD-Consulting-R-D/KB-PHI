@@ -3,7 +3,7 @@
 Chapitre **KB-PHI** — Philosophy knowledge base — de la Knowledge Base **CD Consulting R&D**
 (organisation GitHub [CD-Consulting-R-D](https://github.com/CD-Consulting-R-D)).
 
-**Statut : créé le 08/09/2026, premières entrées publiées le 09/09/2026 : `3e9f.html` (entrée 1, « The Mystery of Consciousness » (Searle, 1997) — synthèse du livre et de ses commentaires) et `6b1d.html` (entrée 2, compte-rendu par chapitre et revue de la littérature récente) — dossier Searle, corps en français, appareil (cartouche, amorce, sommaire) en anglais.** Chapitre : philosophie.
+**Statut : créé le 08/09/2026, premières entrées publiées le 09/09/2026 : `3e9f.html` (entrée 1, « The Mystery of Consciousness » (Searle, 1997) — synthèse du livre et de ses commentaires) et `6b1d.html` (entrée 2, compte-rendu par chapitre et revue de la littérature récente) — dossier Searle, corps en français, appareil (cartouche, amorce, sommaire) en anglais ; entrée 3 : `c5a2.html` (Des théologiens chez Anthropic : ce que l'enquête du *New York Times* établit, ce qu'elle suggère, ce qu'elle laisse dans l'ombre).** Chapitre : philosophie.
 
 ## Rôle
 
